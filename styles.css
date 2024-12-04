@@ -1,6 +1,7 @@
 /* styles.css */
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -29,3 +30,20 @@ body {
     }
 }
 
+/* Footer Style */
+#footer {
+    margin-top: 20px;
+    font-size: 0.875rem; /* Küçük yazı */
+    color: rgba(0, 0, 0, 0.6); /* Soluk renk */
+    text-align: center;
+}
+
+#footer a {
+    color: rgba(0, 0, 0, 0.8); /* Link rengi */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#footer a:hover {
+    text-decoration: underline; /* Üzerine gelince altı çizili */
+}
