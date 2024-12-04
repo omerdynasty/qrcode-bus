@@ -1,7 +1,7 @@
 // script.js
 const textElement = document.getElementById('text');
 const cursor = document.getElementById('cursor');
-const text = "Hey nosy dude, looks like you scanned the qr code I (secretly) taped on the bus, on your phone... Anyway, let's not drag things out any further... for you.";
+const text = "Hey nosy dude, looks like you scanned the qr code, on your phone... Anyway, let's not drag things out any further... for you.";
 let index = 0;
 
 function typeText() {
