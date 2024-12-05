@@ -32,7 +32,21 @@ body {
     text-align: left;
     width: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+}
+
+.text-fade {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 #click-container {
@@ -53,18 +67,6 @@ body {
 
 #redirect-button:hover {
     background-color: #0056b3;
-}
-
-.blink {
-    animation: blink 0.8s steps(1) infinite;
-    display: inline-block;
-    position: relative;
-    margin-left: 2px;
-}
-
-@keyframes blink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0; }
 }
 
 /* Footer Style */
