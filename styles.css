@@ -46,3 +46,20 @@ body {
         opacity: 1;
     }
 }
+
+/* Buton stili */
+#clickButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #4CAF50; /* Yeşil renk */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#clickButton:hover {
+    background-color: #45a049; /* Hover efekti */
+}
