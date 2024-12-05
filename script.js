@@ -10,6 +10,10 @@ function typeText() {
         textElement.textContent += text[index];
         index++;
 
+        // Cursor'un yazının hemen ardından doğru yerde olmasını sağla
+        cursor.style.display = "inline-block";
+        textElement.appendChild(cursor);
+
         if (text[index - 1] === "." || text[index - 1] === "?") {
             setTimeout(typeText, 1000); // Cümle sonlarında bekleme
         } else {
@@ -17,8 +21,8 @@ function typeText() {
         }
     } else {
         // Yazma tamamlandığında
-        cursor.style.display = "none"; // İmleci gizle
-        redirectButton.style.display = "block"; // Butonu göster
+        cursor.style.display = "none"; // Cursor'u gizle
+        redirectButton.style.display = "block"; // "Click me" butonunu göster
     }
 }
 
