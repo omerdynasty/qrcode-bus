@@ -13,7 +13,7 @@ function typeText() {
         textContainer.appendChild(word); // Kelimeyi ekrana ekle
 
         wordIndex++;
-        setTimeout(typeText, 600); // Bir sonraki kelimeyi eklemeden önce bekle
+        setTimeout(typeText, 350); // Bir sonraki kelimeyi eklemeden önce bekle
     } else {
         // Yazma tamamlandığında
         setTimeout(() => {
