@@ -1,24 +1,19 @@
 // script.js
 const textContainer = document.getElementById('text-container');
 const redirectButton = document.getElementById('redirect-button');
-const text = [
-    "Hey nosy dude,",
-    "looks like you scanned the QR code",
-    "I (secretly) taped on the bus on your phone...",
-    "Anyway, let's not drag things out any further...",
-    "for you."
-];
-let lineIndex = 0;
+const text = "Hey nosy dude, looks like you scanned the QR code I (secretly) taped on the bus on your phone... Anyway, let's not drag things out any further... for you.";
+const words = text.split(" "); // Cümleyi kelimelere ayır
+let wordIndex = 0;
 
 function typeText() {
-    if (lineIndex < text.length) {
-        const line = document.createElement('div'); // Yeni bir satır oluştur
-        line.textContent = text[lineIndex]; // Yazıyı ekle
-        line.classList.add('text-fade'); // Solarak belirme animasyonu ekle
-        textContainer.appendChild(line); // Metni ekrana ekle
+    if (wordIndex < words.length) {
+        const word = document.createElement('span'); // Yeni bir kelime oluştur
+        word.textContent = words[wordIndex] + " "; // Kelimeyi ekle (sonuna boşluk da ekle)
+        word.classList.add('text-fade'); // Solarak belirme animasyonu ekle
+        textContainer.appendChild(word); // Kelimeyi ekrana ekle
 
-        lineIndex++;
-        setTimeout(typeText, 1000); // Bir sonraki satırı bekleyerek yaz
+        wordIndex++;
+        setTimeout(typeText, 200); // Bir sonraki kelimeyi eklemeden önce bekle
     } else {
         // Yazma tamamlandığında
         setTimeout(() => {
