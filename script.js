@@ -1,7 +1,9 @@
 // script.js
 const textElement = document.getElementById('text');
 const cursor = document.getElementById('cursor');
-const text = "Hey nosy dude, looks like you scanned the qr code, on your phone... Anyway, let's not drag things out any further... for you.";
+const clickContainer = document.getElementById('click-container');
+const redirectButton = document.getElementById('redirect-button');
+const text = "Hey nosy dude, looks like you scanned the QR code I (secretly) taped on the bus on your phone... Anyway, let's not drag things out any further... for you.";
 let index = 0;
 
 function typeText() {
@@ -17,13 +19,15 @@ function typeText() {
             setTimeout(typeText, 75);
         }
     } else {
-        // Yazma tamamlandığında yönlendirme yap
+        // Yazma tamamlandığında
         cursor.classList.remove('blink'); // Cursor'un yanıp sönmesini durdur
-        setTimeout(() => {
-            window.location.href = "https://www.linkslist.app/WEoONoO";
-        }, 2000);
+        cursor.style.display = "none"; // Cursor'u gizle
+        clickContainer.style.display = "block"; // "Click me" butonunu göster
     }
 }
 
-typeText();
+redirectButton.addEventListener('click', () => {
+    window.location.href = "https://www.linkslist.app/WEoONoO";
+});
 
+typeText();
