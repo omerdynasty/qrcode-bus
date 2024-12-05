@@ -1,13 +1,14 @@
 /* styles.css */
 body {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start; /* Sola dayalı başlat */
+    align-items: flex-start; /* Ekranın üst kısmına dayalı */
     height: 100vh;
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
     background-color: #f4f4f4;
     color: #333;
+    padding: 20px; /* Ekrandan biraz uzaklaştırmak için */
 }
 
 #container {
