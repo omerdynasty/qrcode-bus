@@ -1,7 +1,7 @@
 // script.js
 const textContainer = document.getElementById('text-container');
 const redirectButton = document.getElementById('redirect-button');
-const text = "Hey nosy dude, looks like you scanned the QR code I (secretly) taped on the bus on your phone... Anyway, let's not drag things out any further... for you.";
+const text = "Hey curious dude, looks like you scanned the QR code I (secretly) taped on the everywhere, on your phone... Anyway, let's not drag things out any further... for you.";
 const words = text.split(" "); // Cümleyi kelimelere ayır
 let wordIndex = 0;
 
