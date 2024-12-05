@@ -29,7 +29,7 @@ body {
     font-size: 1.5rem;
     white-space: nowrap; /* Kelimelerin yan yana gelmesi için */
     overflow: hidden;
-    text-align: left;
+    text-align: left; /* Sola dayalı hizalama */
     display: flex; /* Kelimeleri yan yana hizalamak için flex kullanılıyor */
     flex-wrap: wrap; /* Kelimelerin taşmasına izin verir, gerekirse */
 }
