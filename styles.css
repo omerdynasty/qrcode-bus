@@ -1,44 +1,41 @@
-/* styles.css */
 body {
     display: flex;
-    justify-content: flex-start; /* Sola dayalı başlat */
-    align-items: flex-start; /* Ekranın üst kısmına dayalı */
-    height: 100vh;
+    justify-content: center; /* Yazıyı ekranın ortasına yerleştir */
+    align-items: center; /* Yazıyı dikey olarak ortala */
+    height: 100vh; /* Tam ekran yüksekliği */
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
     background-color: #f4f4f4;
     color: #333;
-    padding: 20px; /* Ekrandan biraz uzaklaştırmak için */
 }
 
 #container {
-    width: 90%;
-    max-width: 800px;
+    width: 80%; /* Yazının sığacağı alanın genişliği */
+    max-width: 800px; /* Maksimum genişlik */
+    padding: 20px;
     border: 2px solid #ccc;
     border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 90%;
+    justify-content: flex-start;
+    align-items: flex-start; /* İçeriği sola hizala */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+    background-color: white; /* Arka plan rengini beyaz yap */
 }
 
 #text-container {
     font-size: 1.5rem;
-    white-space: nowrap; /* Kelimelerin yan yana gelmesi için */
-    overflow: hidden;
-    text-align: left; /* Sola dayalı hizalama */
-    display: flex; /* Kelimeleri yan yana hizalamak için flex kullanılıyor */
-    flex-wrap: wrap; /* Kelimelerin taşmasına izin verir, gerekirse */
+    white-space: nowrap; /* Kelimelerin yan yana yazılmasını sağla */
+    overflow: hidden; /* Taşan yazıları gizle */
+    text-align: left; /* Yazıyı sola hizala */
+    display: flex;
+    flex-wrap: wrap; /* Yazı kutusunu sarmasına izin ver */
 }
 
 .text-fade {
     opacity: 0;
     animation: fadeIn 0.5s ease-in-out forwards;
-    margin-right: 10px; /* Her kelime arasına boşluk ekle */
+    margin-right: 10px; /* Kelimeler arasında boşluk */
 }
 
 @keyframes fadeIn {
@@ -48,42 +45,4 @@ body {
     to {
         opacity: 1;
     }
-}
-
-#click-container {
-    margin: 20px 0;
-}
-
-#redirect-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    display: block;
-}
-
-#redirect-button:hover {
-    background-color: #0056b3;
-}
-
-/* Footer Style */
-#footer {
-    font-size: 0.875rem;
-    color: rgba(0, 0, 0, 0.6);
-    text-align: center;
-    width: 100%;
-}
-
-#footer a {
-    color: rgba(0, 0, 0, 0.8);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-#footer a:hover {
-    text-decoration: underline;
 }
