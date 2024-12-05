@@ -1,26 +1,29 @@
 // script.js
-const textElement = document.getElementById('text');
-const cursor = document.getElementById('cursor');
+const textContainer = document.getElementById('text-container');
 const redirectButton = document.getElementById('redirect-button');
-const text = "Hey nosy dude, looks like you scanned the QR code I (secretly) taped on the bus on your phone... Anyway, let's not drag things out any further... for you.";
-let index = 0;
+const text = [
+    "Hey nosy dude,",
+    "looks like you scanned the QR code",
+    "I (secretly) taped on the bus on your phone...",
+    "Anyway, let's not drag things out any further...",
+    "for you."
+];
+let lineIndex = 0;
 
 function typeText() {
-    if (index < text.length) {
-        textElement.textContent = text.substring(0, index + 1); // Yazıyı güncelle
-        index++;
+    if (lineIndex < text.length) {
+        const line = document.createElement('div'); // Yeni bir satır oluştur
+        line.textContent = text[lineIndex]; // Yazıyı ekle
+        line.classList.add('text-fade'); // Solarak belirme animasyonu ekle
+        textContainer.appendChild(line); // Metni ekrana ekle
 
-        if (text[index - 1] === "." || text[index - 1] === "?") {
-            // Cümle sonlarında bekleme
-            setTimeout(typeText, 1000);
-        } else {
-            // Normal yazma
-            setTimeout(typeText, 75);
-        }
+        lineIndex++;
+        setTimeout(typeText, 1000); // Bir sonraki satırı bekleyerek yaz
     } else {
         // Yazma tamamlandığında
-        cursor.style.display = "none"; // Cursor'u gizle
-        redirectButton.style.display = "block"; // "Click me" butonunu göster
+        setTimeout(() => {
+            redirectButton.style.display = "block"; // "Click me" butonunu göster
+        }, 1000);
     }
 }
 
