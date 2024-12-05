@@ -1,7 +1,7 @@
 body {
     display: flex;
-    justify-content: center; /* Yazıyı ekranın ortasına yerleştir */
-    align-items: center; /* Yazıyı dikey olarak ortala */
+    justify-content: center; /* Ekranın ortasında yerleştirmek */
+    align-items: center; /* Dikey olarak ortalamak */
     height: 100vh; /* Tam ekran yüksekliği */
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
@@ -10,32 +10,32 @@ body {
 }
 
 #container {
-    width: 80%; /* Yazının sığacağı alanın genişliği */
+    width: 80%; /* Yazının sığacağı genişlik */
     max-width: 800px; /* Maksimum genişlik */
     padding: 20px;
-    border: 2px solid #ccc;
+    border: 2px solid #ccc; /* Sınır */
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start; /* İçeriği sola hizala */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
-    background-color: white; /* Arka plan rengini beyaz yap */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+    background-color: white; /* Arka plan rengi */
 }
 
 #text-container {
     font-size: 1.5rem;
-    white-space: nowrap; /* Kelimelerin yan yana yazılmasını sağla */
+    white-space: nowrap; /* Kelimeler yan yana gelecek */
     overflow: hidden; /* Taşan yazıları gizle */
     text-align: left; /* Yazıyı sola hizala */
     display: flex;
-    flex-wrap: wrap; /* Yazı kutusunu sarmasına izin ver */
+    flex-wrap: wrap; /* Kelimeler sarmaya devam etsin */
 }
 
 .text-fade {
     opacity: 0;
     animation: fadeIn 0.5s ease-in-out forwards;
-    margin-right: 10px; /* Kelimeler arasında boşluk */
+    margin-right: 10px; /* Kelimeler arasındaki boşluk */
 }
 
 @keyframes fadeIn {
