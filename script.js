@@ -7,17 +7,15 @@ let index = 0;
 
 function typeText() {
     if (index < text.length) {
-        textElement.textContent += text[index];
+        textElement.textContent = text.slice(0, index + 1); // Yazıyı metin olarak ekle
         index++;
 
-        // Cursor'un yazının hemen ardından doğru yerde olmasını sağla
-        cursor.style.display = "inline-block";
-        textElement.appendChild(cursor);
-
         if (text[index - 1] === "." || text[index - 1] === "?") {
-            setTimeout(typeText, 1000); // Cümle sonlarında bekleme
+            // Cümle sonlarında bekleme
+            setTimeout(typeText, 1000);
         } else {
-            setTimeout(typeText, 75); // Normal yazma
+            // Normal yazma
+            setTimeout(typeText, 75);
         }
     } else {
         // Yazma tamamlandığında
