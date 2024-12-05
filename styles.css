@@ -13,8 +13,8 @@ body {
 #container {
     width: 90%;
     max-width: 600px;
-    border: 2px solid #ccc; /* Çerçeve */
-    border-radius: 10px; /* Köşeler yuvarlatıldı */
+    border: 2px solid #ccc;
+    border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     background-color: white;
@@ -22,7 +22,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 90%; /* Çerçevenin yüksekliği */
+    height: 90%;
 }
 
 #text-container {
@@ -30,7 +30,9 @@ body {
     white-space: pre-wrap;
     overflow: hidden;
     text-align: left;
-    width: 100%; /* Yazı genişliği çerçeveye göre */
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 #click-container {
@@ -56,6 +58,8 @@ body {
 .blink {
     animation: blink 0.8s steps(2) infinite;
     display: inline-block;
+    position: relative;
+    margin-left: 2px;
 }
 
 @keyframes blink {
