@@ -7,7 +7,7 @@ let index = 0;
 
 function typeText() {
     if (index < text.length) {
-        textElement.textContent = text.slice(0, index + 1); // Yazıyı metin olarak ekle
+        textElement.textContent = text.substring(0, index + 1); // Yazıyı güncelle
         index++;
 
         if (text[index - 1] === "." || text[index - 1] === "?") {
