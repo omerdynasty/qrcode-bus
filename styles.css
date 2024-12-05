@@ -12,7 +12,7 @@ body {
 
 #container {
     width: 90%;
-    max-width: 600px;
+    max-width: 800px;
     border: 2px solid #ccc;
     border-radius: 10px;
     padding: 20px;
@@ -27,17 +27,17 @@ body {
 
 #text-container {
     font-size: 1.5rem;
-    white-space: pre-wrap;
+    white-space: nowrap; /* Kelimelerin yan yana gelmesi için */
     overflow: hidden;
     text-align: left;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Kelimeleri yan yana hizalamak için flex kullanılıyor */
+    flex-wrap: wrap; /* Kelimelerin taşmasına izin verir, gerekirse */
 }
 
 .text-fade {
     opacity: 0;
     animation: fadeIn 0.5s ease-in-out forwards;
+    margin-right: 10px; /* Her kelime arasına boşluk ekle */
 }
 
 @keyframes fadeIn {
